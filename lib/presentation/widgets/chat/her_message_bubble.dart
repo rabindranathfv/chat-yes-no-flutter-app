@@ -8,7 +8,6 @@ class HerMessageBubble extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
-    final imageUrl = message.imageUrl;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -24,7 +23,7 @@ class HerMessageBubble extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 5.0),
-        if (imageUrl != null) _ImageBubble(imageUrl: imageUrl),
+        _ImageBubble(imageUrl: message.imageUrl! ),
         const SizedBox(height: 10),
       ],
     );
